@@ -5,6 +5,7 @@ import {
 } from "../../../utilities/commonUtils";
 import ScrollService from "../../../utilities/ScrollService";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
+import { faTimes } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./Header.css";
 
@@ -58,19 +59,23 @@ export default function Header() {
   }, [currentScreenSubscription]);
 
   return (
-    <div
-      className="header-container"
-      onClick={() => setShowHeaderOptions(!showHeaderOptions)}
-    >
+    <div className="header-container">
       <div className="header-parent">
         <div
+          id="header-hamburger"
           className="header-hamburger"
-          onClick={() => setShowHeaderOptions(!showHeaderOptions)}
+          onClick={() => {
+            let rotate = document.getElementById("header-hamburger-cross");
+            rotate.setAttribute("class", "header-hamburger-cross");
+            let rotate2 = document.getElementById("header-hamburger");
+            rotate2.setAttribute("class", "header-hamburger rotateIt");
+            setShowHeaderOptions(!showHeaderOptions);
+          }}
         >
           <FontAwesomeIcon className="header-hamburger-bars" icon={faBars} />
         </div>
         <div className="header-logo">
-          <span>NIRBHAY~</span>
+          <span>NIRBHAY</span>
         </div>
         <div
           className={
@@ -79,6 +84,19 @@ export default function Header() {
               : "header-options"
           }
         >
+          <div
+            id="header-hamburger-cross"
+            className="header-hamburger-cross"
+            onClick={() => {
+              let rotate = document.getElementById("header-hamburger-cross");
+              rotate.setAttribute("class", "header-hamburger-cross rotateIt");
+              let rotate2 = document.getElementById("header-hamburger");
+              rotate2.setAttribute("class", "header-hamburger");
+              setShowHeaderOptions(!showHeaderOptions);
+            }}
+          >
+            <FontAwesomeIcon className="header-hamburger-bars" icon={faTimes} />
+          </div>
           {getHeaderOptions()}
         </div>
       </div>

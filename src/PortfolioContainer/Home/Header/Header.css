@@ -26,6 +26,9 @@
   cursor: pointer;
   font-weight: 600;
 }
+.header-hamburger-cross {
+  display: none;
+}
 .header-hamburger {
   display: none;
   color: var(--white);
@@ -67,6 +70,10 @@
     z-index: 1000;
     opacity: 0.5;
   }
+  .rotateIt {
+    transform: rotate(180deg);
+    transition: transform 0.8s linear;
+  }
   .header-option-seperator {
     margin: 0;
   }
@@ -77,7 +84,16 @@
     font-size: 36px;
     cursor: pointer;
     margin: 0px 10px;
+    color: #fff;
+  }
+  .header-hamburger-cross {
+    display: block;
+    font-size: 20px;
+    cursor: pointer;
     color: var(--white);
+    position: absolute;
+    top: 20px;
+    right: 20px;
   }
   .show-hamburger-options {
     left: 0;

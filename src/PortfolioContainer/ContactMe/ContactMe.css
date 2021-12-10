@@ -35,11 +35,12 @@
 }
 
 .img-back h4 {
-  letter-spacing: 0.3rem;
+  letter-spacing: 0.2rem;
   font-weight: 400;
   color: white;
   font-size: 18px;
-  opacity: 0.5;
+  opacity: 0.8;
+  margin-top: 10px;
 }
 
 .back-form .img-back img {
@@ -129,8 +130,11 @@ button .load img {
   color: green;
 }
 .col i {
-  padding: 7px;
-  color: #fff;
+  color: white;
+  padding: 8px;
+  padding-left: 0px;
+  font-size: 20px;
+  margin: 5px;
 }
 .col i:hover {
   transform: scale(1.5);

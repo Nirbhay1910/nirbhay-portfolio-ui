@@ -56,7 +56,10 @@ function Profile() {
             >
               Hire Me{" "}
             </button>
-            <a href="CV.pdf" download="Nirbhay CV.pdf">
+            <a
+              href="https://drive.google.com/file/d/1-cz5NH_G_pFx7vZilwrOOusOsSBnhxnD/view?usp=sharing"
+              target="__blank"
+            >
               <button className="btn highlighted-btn">Get Resume</button>
             </a>
           </div>
