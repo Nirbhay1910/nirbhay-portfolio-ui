@@ -27,7 +27,7 @@ const Resume = (props) => {
             {props.heading ? (
               props.link ? (
                 <a className="projectLinks" href={props.link}>
-                  {props.heading}
+                  {props.heading} (Link)
                 </a>
               ) : (
                 props.heading

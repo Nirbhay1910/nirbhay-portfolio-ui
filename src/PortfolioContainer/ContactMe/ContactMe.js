@@ -46,7 +46,7 @@ export default function ContactMe(props) {
       };
       setBool(true);
       const res = await axios.post(
-        `https://nirbhay1910-portfolio.herokuapp.com/contact`,
+        `https://nirbhay-portfolio-backend.vercel.app/contact`,
         data
       );
       if (name.length === 0 || email.length === 0 || message.length === 0) {
